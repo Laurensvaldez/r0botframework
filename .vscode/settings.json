@@ -1,0 +1,12 @@
+{
+    "python.testing.unittestArgs": [
+        "-v",
+        "-s",
+        "./Tests",
+        "-p",
+        "test*.py"
+    ],
+    "python.testing.pytestEnabled": false,
+    "python.testing.unittestEnabled": true,
+    "robot.language-server.python": "c:\\Users\\Laurens\\AppData\\Local\\Programs\\Python\\Python311\\python.exe"
+}
