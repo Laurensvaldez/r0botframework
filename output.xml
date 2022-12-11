@@ -1,253 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.1 (Python 3.11.0 on win32)" generated="20221208 19:25:16.955" rpa="false" schemaversion="3">
-<suite id="s1" name="Crm" source="u:\code_projects\udemy\RFW\Tests\Crm.robot">
-<test id="s1-t1" name="Should be able to add new customer" line="15">
-<kw name="Set Selenium Speed" library="SeleniumLibrary">
-<arg>.2s</arg>
-<doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20221208 19:25:17.071" endtime="20221208 19:25:17.072"/>
-</kw>
-<kw name="Set Selenium Timeout" library="SeleniumLibrary">
-<arg>10s</arg>
-<doc>Sets the timeout that is used by various keywords.</doc>
-<status status="PASS" starttime="20221208 19:25:17.072" endtime="20221208 19:25:17.072"/>
-</kw>
+<robot generator="Robot 6.0.1 (Python 3.11.0 on win32)" generated="20221211 16:07:36.583" rpa="false" schemaversion="3">
+<suite id="s1" name="Demo" source="u:\code_projects\udemy\RFW\tests\demo.robot">
+<test id="s1-t1" name="Test case 1" line="7">
+<kw name="Do Something">
 <kw name="Log" library="BuiltIn">
-<arg>Starting the test case!</arg>
+<arg>I am doing something...</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20221208 19:25:17.072" level="INFO">Starting the test case!</msg>
-<status status="PASS" starttime="20221208 19:25:17.072" endtime="20221208 19:25:17.073"/>
+<msg timestamp="20221211 16:07:36.601" level="INFO">I am doing something...</msg>
+<status status="PASS" starttime="20221211 16:07:36.601" endtime="20221211 16:07:36.603"/>
 </kw>
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>https://automationplayground.com/crm/</arg>
-<arg>chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20221208 19:25:17.074" level="INFO">Opening browser 'chrome' to base url 'https://automationplayground.com/crm/'.</msg>
-<status status="PASS" starttime="20221208 19:25:17.074" endtime="20221208 19:25:19.744"/>
+<status status="PASS" starttime="20221211 16:07:36.601" endtime="20221211 16:07:36.603"/>
 </kw>
-<kw name="Set Window Position" library="SeleniumLibrary">
-<arg>x=341</arg>
-<arg>y=169</arg>
-<doc>Sets window position using ``x`` and ``y`` coordinates.</doc>
-<status status="PASS" starttime="20221208 19:25:19.744" endtime="20221208 19:25:20.050"/>
+<kw name="Do Something Else">
+<kw name="Log" library="BuiltIn">
+<arg>I am doing something else...</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20221211 16:07:36.604" level="INFO">I am doing something else...</msg>
+<status status="PASS" starttime="20221211 16:07:36.604" endtime="20221211 16:07:36.604"/>
 </kw>
-<kw name="Set Window Size" library="SeleniumLibrary">
-<arg>width=1935</arg>
-<arg>height=1090</arg>
-<doc>Sets current windows size to given ``width`` and ``height``.</doc>
-<status status="PASS" starttime="20221208 19:25:20.050" endtime="20221208 19:25:20.377"/>
+<status status="PASS" starttime="20221211 16:07:36.603" endtime="20221211 16:07:36.605"/>
 </kw>
-<kw name="Page Should Contain" library="SeleniumLibrary">
-<arg>Customers Are Priority One!</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20221208 19:25:20.790" level="INFO">Current page contains text 'Customers Are Priority One!'.</msg>
-<status status="PASS" starttime="20221208 19:25:20.377" endtime="20221208 19:25:20.790"/>
-</kw>
-<kw name="Click Link" library="SeleniumLibrary">
-<arg>name=sign-in-link</arg>
-<doc>Clicks a link identified by ``locator``.</doc>
-<msg timestamp="20221208 19:25:20.791" level="INFO">Clicking link 'name=sign-in-link'.</msg>
-<status status="PASS" starttime="20221208 19:25:20.790" endtime="20221208 19:25:21.565"/>
-</kw>
-<kw name="Page Should Contain" library="SeleniumLibrary">
-<arg>Login</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20221208 19:25:21.975" level="INFO">Current page contains text 'Login'.</msg>
-<status status="PASS" starttime="20221208 19:25:21.565" endtime="20221208 19:25:21.975"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=email-id</arg>
-<arg>admin@robotframeworktutorial.com</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221208 19:25:21.976" level="INFO">Typing text 'admin@robotframeworktutorial.com' into text field 'id=email-id'.</msg>
-<status status="PASS" starttime="20221208 19:25:21.975" endtime="20221208 19:25:22.627"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=password</arg>
-<arg>qwe</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221208 19:25:22.628" level="INFO">Typing text 'qwe' into text field 'id=password'.</msg>
-<status status="PASS" starttime="20221208 19:25:22.627" endtime="20221208 19:25:23.271"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>id=submit-id</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20221208 19:25:23.272" level="INFO">Clicking button 'id=submit-id'.</msg>
-<status status="PASS" starttime="20221208 19:25:23.271" endtime="20221208 19:25:24.574"/>
-</kw>
-<kw name="Page Should Contain" library="SeleniumLibrary">
-<arg>Our Happy Customers</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20221208 19:25:24.576" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=108.0.5359.98)
-Stacktrace:
-Backtrace:
-	(No symbol) [0x00F9F243]
-	(No symbol) [0x00F27FD1]
-	(No symbol) [0x00E1D04D]
-	(No symbol) [0x00E02D7A]
-	(No symbol) [0x00E6BE7B]
-	(No symbol) [0x00E7C196]
-	(No symbol) [0x00E68386]
-	(No symbol) [0x00E4163C]
-	(No symbol) [0x00E4269D]
-	GetHandleVerifier [0x01239A22+2655074]
-	GetHandleVerifier [0x0122CA24+2601828]
-	GetHandleVerifier [0x01048C0A+619850]
-	GetHandleVerifier [0x01047830+614768]
-	(No symbol) [0x00F305FC]
-	(No symbol) [0x00F35968]
-	(No symbol) [0x00F35A55]
-	(No symbol) [0x00F4051B]
-	BaseThreadInitThunk [0x77C3FEF9+25]
-	RtlGetAppContainerNamedObjectPath [0x77DC7BBE+286]
-	RtlGetAppContainerNamedObjectPath [0x77DC7B8E+238]
-</msg>
-<msg timestamp="20221208 19:25:24.578" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=108.0.5359.98)
-Stacktrace:
-Backtrace:
-	(No symbol) [0x00F9F243]
-	(No symbol) [0x00F27FD1]
-	(No symbol) [0x00E1D04D]
-	(No symbol) [0x00E02D7A]
-	(No symbol) [0x00E6BE7B]
-	(No symbol) [0x00E7C196]
-	(No symbol) [0x00E68386]
-	(No symbol) [0x00E4163C]
-	(No symbol) [0x00E4269D]
-	GetHandleVerifier [0x01239A22+2655074]
-	GetHandleVerifier [0x0122CA24+2601828]
-	GetHandleVerifier [0x01048C0A+619850]
-	GetHandleVerifier [0x01047830+614768]
-	(No symbol) [0x00F305FC]
-	(No symbol) [0x00F35968]
-	(No symbol) [0x00F35A55]
-	(No symbol) [0x00F4051B]
-	BaseThreadInitThunk [0x77C3FEF9+25]
-	RtlGetAppContainerNamedObjectPath [0x77DC7BBE+286]
-	RtlGetAppContainerNamedObjectPath [0x77DC7B8E+238]
-</msg>
-<status status="FAIL" starttime="20221208 19:25:24.574" endtime="20221208 19:25:24.586"/>
-</kw>
-<kw name="Click Link" library="SeleniumLibrary">
-<arg>id=new-customer</arg>
-<doc>Clicks a link identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20221208 19:25:24.586" endtime="20221208 19:25:24.587"/>
-</kw>
-<kw name="Page Should Contain" library="SeleniumLibrary">
-<arg>Add Customer</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="NOT RUN" starttime="20221208 19:25:24.587" endtime="20221208 19:25:24.587"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=EmailAddress</arg>
-<arg>janedoe@gmail.com</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20221208 19:25:24.587" endtime="20221208 19:25:24.587"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=FirstName</arg>
-<arg>Jane</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20221208 19:25:24.588" endtime="20221208 19:25:24.588"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=LastName</arg>
-<arg>Doe</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20221208 19:25:24.588" endtime="20221208 19:25:24.588"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=City</arg>
-<arg>Dallas</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20221208 19:25:24.588" endtime="20221208 19:25:24.588"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>3s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20221208 19:25:24.588" endtime="20221208 19:25:24.588"/>
-</kw>
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="NOT RUN" starttime="20221208 19:25:24.588" endtime="20221208 19:25:24.588"/>
-</kw>
-<doc>This is some basic info</doc>
-<tag>1006</tag>
-<tag>contacts</tag>
-<tag>smoke</tag>
-<status status="FAIL" starttime="20221208 19:25:17.071" endtime="20221208 19:25:24.589">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=108.0.5359.98)
-Stacktrace:
-Backtrace:
-	(No symbol) [0x00F9F243]
-	(No symbol) [0x00F27FD1]
-	(No symbol) [0x00E1D04D]
-	(No symbol) [0x00E02D7A]
-	(No symbol) [0x00E6BE7B]
-	(No symbol) [0x00E7C196]
-	(No symbol) [0x00E68386]
-	(No symbol) [0x00E4163C]
-	(No symbol) [0x00E4269D]
-	GetHandleVerifier [0x01239A22+2655074]
-	GetHandleVerifier [0x0122CA24+2601828]
-	GetHandleVerifier [0x01048C0A+619850]
-	GetHandleVerifier [0x01047830+614768]
-	(No symbol) [0x00F305FC]
-	(No symbol) [0x00F35968]
-	(No symbol) [0x00F35A55]
-	(No symbol) [0x00F4051B]
-	BaseThreadInitThunk [0x77C3FEF9+25]
-	RtlGetAppContainerNamedObjectPath [0x77DC7BBE+286]
-	RtlGetAppContainerNamedObjectPath [0x77DC7B8E+238]
-</status>
+<status status="PASS" starttime="20221211 16:07:36.601" endtime="20221211 16:07:36.605"/>
 </test>
-<doc>This is some basic info about the whole suite</doc>
-<status status="FAIL" starttime="20221208 19:25:16.958" endtime="20221208 19:25:24.590"/>
+<test id="s1-t2" name="Test case 2" line="11">
+<kw name="Do Another Thing">
+<kw name="Log" library="BuiltIn">
+<arg>I am doing another thing...</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20221211 16:07:36.607" level="INFO">I am doing another thing...</msg>
+<status status="PASS" starttime="20221211 16:07:36.607" endtime="20221211 16:07:36.607"/>
+</kw>
+<status status="PASS" starttime="20221211 16:07:36.606" endtime="20221211 16:07:36.607"/>
+</kw>
+<kw name="Do Something Else">
+<kw name="Log" library="BuiltIn">
+<arg>I am doing something else...</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20221211 16:07:36.608" level="INFO">I am doing something else...</msg>
+<status status="PASS" starttime="20221211 16:07:36.607" endtime="20221211 16:07:36.608"/>
+</kw>
+<status status="PASS" starttime="20221211 16:07:36.607" endtime="20221211 16:07:36.608"/>
+</kw>
+<status status="PASS" starttime="20221211 16:07:36.606" endtime="20221211 16:07:36.608"/>
+</test>
+<status status="PASS" starttime="20221211 16:07:36.586" endtime="20221211 16:07:36.609"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="0" fail="1" skip="0">1006</stat>
-<stat pass="0" fail="1" skip="0">contacts</stat>
-<stat pass="0" fail="1" skip="0">smoke</stat>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Crm">Crm</stat>
+<stat pass="2" fail="0" skip="0" id="s1" name="Demo">Demo</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20221208 19:25:24.576" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=108.0.5359.98)
-Stacktrace:
-Backtrace:
-	(No symbol) [0x00F9F243]
-	(No symbol) [0x00F27FD1]
-	(No symbol) [0x00E1D04D]
-	(No symbol) [0x00E02D7A]
-	(No symbol) [0x00E6BE7B]
-	(No symbol) [0x00E7C196]
-	(No symbol) [0x00E68386]
-	(No symbol) [0x00E4163C]
-	(No symbol) [0x00E4269D]
-	GetHandleVerifier [0x01239A22+2655074]
-	GetHandleVerifier [0x0122CA24+2601828]
-	GetHandleVerifier [0x01048C0A+619850]
-	GetHandleVerifier [0x01047830+614768]
-	(No symbol) [0x00F305FC]
-	(No symbol) [0x00F35968]
-	(No symbol) [0x00F35A55]
-	(No symbol) [0x00F4051B]
-	BaseThreadInitThunk [0x77C3FEF9+25]
-	RtlGetAppContainerNamedObjectPath [0x77DC7BBE+286]
-	RtlGetAppContainerNamedObjectPath [0x77DC7B8E+238]
-</msg>
 </errors>
 </robot>
