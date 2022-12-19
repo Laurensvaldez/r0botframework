@@ -1,0 +1,11 @@
+1671483248277	geckodriver	INFO	Listening on 127.0.0.1:51705
+1671483251344	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51706" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Laurens\\AppData\\Local\\Temp\\rust_mozprofile3zUhuw"
+1671483251728	Marionette	INFO	Marionette enabled
+1671483251733	Marionette	INFO	Listening on port 51721
+Read port: 51721
+WebDriver BiDi listening on ws://127.0.0.1:51706
+1671483251856	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Laurens\\AppData\\Local\\Temp\\rust_mozprofile3zUhuw\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:51706/devtools/browser/fdaaf44a-83be-4b5e-a176-d472e668dfe0
+1671483253755	Marionette	INFO	Stopped listening on port 51721
+JavaScript error: resource:///modules/UrlbarProviderSearchTips.sys.mjs, line 386: TypeError: window is null

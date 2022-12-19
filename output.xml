@@ -1,37 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.1 (Python 3.11.0 on win32)" generated="20221217 22:28:54.239" rpa="false" schemaversion="3">
-<suite id="s1" name="List" source="u:\code_projects\udemy\RFW\tests\list.robot">
-<test id="s1-t1" name="Variable Demonstration" line="7">
-<kw name="Log" library="BuiltIn">
-<arg>${MY_VARIABLE}[0]</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20221217 22:28:54.259" level="INFO">Hello there</msg>
-<status status="PASS" starttime="20221217 22:28:54.259" endtime="20221217 22:28:54.260"/>
+<robot generator="Robot 6.0.1 (Python 3.11.0 on win32)" generated="20221219 22:30:01.224" rpa="false" schemaversion="3">
+<suite id="s1" name="Amazon" source="u:\code_projects\udemy\RFW\Tests\amazon.robot">
+<test id="s1-t1" name="Logged out user can search for Products" line="13">
+<kw name="Begin Web Test" library="Common" type="SETUP">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>about:blank</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221219 22:30:01.372" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20221219 22:30:01.372" endtime="20221219 22:30:02.664"/>
 </kw>
-<kw name="Log" library="BuiltIn">
-<arg>${MY_VARIABLE}[1]</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20221217 22:28:54.260" level="INFO">This is value 2</msg>
-<status status="PASS" starttime="20221217 22:28:54.260" endtime="20221217 22:28:54.260"/>
+<status status="PASS" starttime="20221219 22:30:01.372" endtime="20221219 22:30:02.664"/>
 </kw>
-<kw name="Log" library="BuiltIn">
-<arg>${MY_VARIABLE}[2]</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20221217 22:28:54.261" level="INFO">Im am item 3</msg>
-<status status="PASS" starttime="20221217 22:28:54.261" endtime="20221217 22:28:54.261"/>
+<kw name="Search for Products" library="Amazon.Web.Gui">
+<kw name="Go To" library="Selenium2Library">
+<arg>http://amazon.nl</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20221219 22:30:02.666" level="INFO">Opening url 'http://amazon.nl'</msg>
+<status status="PASS" starttime="20221219 22:30:02.665" endtime="20221219 22:30:03.279"/>
 </kw>
-<status status="PASS" starttime="20221217 22:28:54.257" endtime="20221217 22:28:54.261"/>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>Amazon.nl</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20221219 22:30:03.279" endtime="20221219 22:30:03.299"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>id=twotabsearchtextbox</arg>
+<arg>Ferrari 458</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221219 22:30:03.299" level="INFO">Typing text 'Ferrari 458' into text field 'id=twotabsearchtextbox'.</msg>
+<msg timestamp="20221219 22:30:03.648" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20221219 22:30:03.649" level="FAIL">Element with locator 'id=twotabsearchtextbox' not found.</msg>
+<status status="FAIL" starttime="20221219 22:30:03.299" endtime="20221219 22:30:03.659"/>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<arg>xpath=//*[@id="nav-search"]/form/div[2]/div/input</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20221219 22:30:03.659" endtime="20221219 22:30:03.659"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>results for "Ferrari 458"</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20221219 22:30:03.659" endtime="20221219 22:30:03.659"/>
+</kw>
+<status status="FAIL" starttime="20221219 22:30:02.665" endtime="20221219 22:30:03.660"/>
+</kw>
+<kw name="End Web Test" library="Common" type="TEARDOWN">
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221219 22:30:03.660" endtime="20221219 22:30:05.792"/>
+</kw>
+<status status="PASS" starttime="20221219 22:30:03.660" endtime="20221219 22:30:05.792"/>
+</kw>
+<tag>Current</tag>
+<status status="FAIL" starttime="20221219 22:30:01.371" endtime="20221219 22:30:05.792">Element with locator 'id=twotabsearchtextbox' not found.</status>
 </test>
-<status status="PASS" starttime="20221217 22:28:54.245" endtime="20221217 22:28:54.262"/>
+<doc>This is some basic info about the whole suite</doc>
+<status status="FAIL" starttime="20221219 22:30:01.228" endtime="20221219 22:30:05.793"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
+<stat pass="0" fail="1" skip="0">Current</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="List">List</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Amazon">Amazon</stat>
 </suite>
 </statistics>
 <errors>
