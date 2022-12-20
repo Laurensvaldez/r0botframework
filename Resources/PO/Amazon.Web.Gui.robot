@@ -6,7 +6,7 @@ Search for Products
     Go To                                                     http://amazon.nl
     Wait Until Page Contains                       Amazon.nl
     Input Text                                               id=twotabsearchtextbox                        Ferrari 458
-    Click Button                                           xpath=//*[@id="nav-search"]/form/div[2]/div/input
+    Click Button                                           xpath=//div/header/div[1]/div[2]/div[1]/div[2]/div[2]/div/div
     Wait Until Page Contains                       results for "Ferrari 458"
     
 Select Product from Search Results
